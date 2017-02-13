@@ -41,7 +41,7 @@ save.bookmark <- function(text,bookmarks=list(),level=1,page=NULL) {
 #'
 
 set.bookmark <- function() {
-  ..device.set.up <- FALSE
+  ..device.set.up <<- FALSE
   ..current.page <<- 0
   return(invisible(NULL))
 }
