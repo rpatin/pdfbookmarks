@@ -52,4 +52,5 @@ setexif <- function(file, metadata, exiftool='D:/remiPatin/Recherche/project/exi
   # exiftool: the path to the ExifTool binary
   exif <- sprintf('-%s="%s"', names(metadata), metadata)
   system2(exiftool, args=c(exif, file))
+  file.remove(paste(file,"_original",sep=""))
 }
